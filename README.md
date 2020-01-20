@@ -4,6 +4,12 @@
 
 地址: [从基础到实战 手把手带你掌握新版 Webpack4.0](https://coding.imooc.com/learn/list/316.html)
 
+---
+
+[TOC]
+
+---
+
 ## Lesson 2-4 webpack 配置
 
 ### Webpack CLI
@@ -14,12 +20,16 @@
 
 全局
 
-- webpack index.js // 调用全局的 webpack
+```js
+webpack index.js // 调用全局的 webpack
+```
 
 本地
 
-- npx webpack index.js // 调用本地的 webpack
-- npm run bundle -> webpack // 通过 npm script 调用本地的 webpack
+```js
+npx webpack index.js // 调用本地的 webpack
+npm run bundle -> webpack // 通过 npm script 调用本地的 webpack
+```
 
 ### webpack.config.js
 
