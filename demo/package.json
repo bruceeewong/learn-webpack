@@ -2,7 +2,9 @@
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "learn webpack following Dell Lee.",
-  "scripts": {},
+  "scripts": {
+    "bundle": "webpack"
+  },
   "private": true,
   "repository": {
     "type": "git",
