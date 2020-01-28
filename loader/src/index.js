@@ -1,5 +1,5 @@
 import image from './image.jpg';
-import './index.css';
+import './index.scss';
 
 var img = document.createElement('img');
 img.src = image;

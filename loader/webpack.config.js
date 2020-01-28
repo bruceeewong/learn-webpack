@@ -25,12 +25,22 @@ module.exports = {
         }
       },
       {
+        // CSS解析配置
         test: /\.css$/,
         use: [
           'style-loader', // 将css写到head的style中
-          'css-loader' // 解析css语法
+          'css-loader', // 解析css语法
         ]
-      }
+      },
+      {
+        // SCSS解析配置
+        test: /\.scss$/,
+        use: [
+          'style-loader', // 将css写到head的style中
+          'css-loader', // 解析css语法
+          'sass-loader' // 解析scss语法å
+        ]
+      },
     ]
   }
 };
