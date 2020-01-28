@@ -23,6 +23,13 @@ module.exports = {
             limit: 20480 // 如果小于20kb(2048字节)，以base64放到js中；否则以图片文件打包到目录中。
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader', // 将css写到head的style中
+          'css-loader' // 解析css语法
+        ]
       }
     ]
   }
