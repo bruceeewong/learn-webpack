@@ -4,14 +4,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  devtool: 'cheap-module-eval-source-map', // 最佳实践
+  // devtool: 'source-map', // 最全面的提示，速度慢
   entry: {
     main: './src/main.js',
-    sub: './src/sub.js'
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'http://cdn.com.cn'
   },
   module: {
     rules: [

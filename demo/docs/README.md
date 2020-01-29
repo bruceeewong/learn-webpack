@@ -8,11 +8,11 @@ the tool that makes sure we can use `webpack / npx` in command line.
 
 global
 
-- webpack index.js // use global webpack to work
+- webpack main.js // use global webpack to work
 
 local
 
-- npx webpack index.js // use local webpack to work
+- npx webpack main.js // use local webpack to work
 - npm run bundle -> webpack // use local webpack through npm script
 
 ## webpack.config.js

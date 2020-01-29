@@ -21,13 +21,13 @@
 全局
 
 ```js
-webpack index.js // 调用全局的 webpack
+webpack main.js // 调用全局的 webpack
 ```
 
 本地
 
 ```js
-npx webpack index.js // 调用本地的 webpack
+npx webpack main.js // 调用本地的 webpack
 npm run bundle -> webpack // 通过 npm script 调用本地的 webpack
 ```
 
