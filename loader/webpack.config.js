@@ -40,13 +40,14 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              modules: true, // 开启css module
               importLoaders: 2 // 使scss文件中的@import的文件也走下面两个loaders
               // 0 => no loaders (default);
               // 1 => postcss-loader;
               // 2 => postcss-loader, sass-loade
             }
           }, // 解析css语法
-          'postcss-loader',
+          'postcss-loader', // 预处理器
           'sass-loader', // 解析scss语法
         ]
       },
