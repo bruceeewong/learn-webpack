@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -58,5 +60,14 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  // 在webpack运行到某个时刻的时候，帮你做一些事
+  plugins: [
+    // HtmlWebpackPlugin 能够为每次打包生成一个html文件，并引入打包后的js
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    // 第三方插件：会在每次打包前运行，清理/PROJECT_DIR/dist/下的文件夹
+    new CleanWebpackPlugin()
+  ]
 };
