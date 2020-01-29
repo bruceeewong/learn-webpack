@@ -1,7 +1,4 @@
-import image from './image.jpg';
-import style from  './index.scss';
-
-var img = document.createElement('img');
-img.src = image;
-img.classList.add(style.img);
-document.body.append(img);
+import './index.scss';
+var root = document.getElementById('root');
+root.innerHTML = '<div class="iconfont icon-iconfonticon-dituxi"></div>';
+root.innerHTML += '<div class="iconfont icon-tag"></div>';

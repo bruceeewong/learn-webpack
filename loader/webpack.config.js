@@ -40,7 +40,6 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true, // 开启css module
               importLoaders: 2 // 使scss文件中的@import的文件也走下面两个loaders
               // 0 => no loaders (default);
               // 1 => postcss-loader;
@@ -51,6 +50,13 @@ module.exports = {
           'sass-loader', // 解析scss语法
         ]
       },
+      {
+        // 处理字体文件, 仅做搬运的工作
+        test: /\.(eot|ttf|svg|woff)$/,
+        use: {
+          loader: 'file-loader'
+        }
+      }
     ]
   }
 };
