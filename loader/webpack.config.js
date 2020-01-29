@@ -38,7 +38,8 @@ module.exports = {
         use: [
           'style-loader', // 将css写到head的style中
           'css-loader', // 解析css语法
-          'sass-loader' // 解析scss语法å
+          'sass-loader', // 解析scss语法
+          'postcss-loader'
         ]
       },
     ]
