@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -18,9 +19,29 @@ module.exports = {
     contentBase: './dist', //
     open: true, // 自动打开页面
     port: 9528,
+    hot: true, // 开启Hot Module Replacement
+    // hotOnly: true // 不让浏览器自动刷新
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        // options: {
+          // presets: [
+          //   [
+          //     '@babel/preset-env',
+          //     {
+          //       targets: {
+          //         chrome: '67' // 对于chrome>67不使用polyfill
+          //       },
+          //       useBuiltIns: 'usage' // 仅仅用到的特性才polyfill
+          //     }
+          //   ]
+          // ]
+        // }
+      },
       {
         // 图片文件的打包配置
         test: /\.(png|jpe?g|gif)$/i,
@@ -40,6 +61,7 @@ module.exports = {
         use: [
           'style-loader', // 将css写到head的style中
           'css-loader', // 解析css语法
+          'postcss-loader'
         ]
       },
       {
@@ -76,6 +98,8 @@ module.exports = {
       template: 'src/index.html'
     }),
     // 第三方插件：会在每次打包前运行，清理/PROJECT_DIR/dist/下的文件夹
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    // 使用 HotModuleReplacementPlugin
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
