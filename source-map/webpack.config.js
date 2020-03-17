@@ -7,7 +7,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map', // 最佳实践
   // devtool: 'source-map', // 最全面的提示，速度慢
   entry: {
-    main: './src/main.js',
+    main: './src/index.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -47,7 +47,7 @@ module.exports = {
               importLoaders: 2 // 使scss文件中的@import的文件也走下面两个loaders
               // 0 => no loaders (default);
               // 1 => postcss-loader;
-              // 2 => postcss-loader, sass-loade
+              // 2 => postcss-loader, sass-loader
             }
           }, // 解析css语法
           'postcss-loader', // 预处理器

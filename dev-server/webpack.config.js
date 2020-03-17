@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map', // 最佳实践
   // devtool: 'source-map', // 最全面的提示，速度慢
   entry: {
-    main: './src/main.js',
+    main: './src/index.js',
   },
   output: {
     publicPath: '/',

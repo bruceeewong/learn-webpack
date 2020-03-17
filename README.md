@@ -21,17 +21,17 @@
 全局
 
 ```js
-webpack main.js // 调用全局的 webpack
+webpack index.js // 调用全局的 webpack
 ```
 
 本地
 
 ```js
-npx webpack main.js // 调用本地的 webpack
+npx webpack index.js // 调用本地的 webpack
 npm run bundle -> webpack // 通过 npm script 调用本地的 webpack
 ```
 
-### webpack.config.js
+### webpack.common.js
 
 - entry: webpack 开始打包的入口 js 文件
 - output:
